@@ -1,0 +1,35 @@
+{
+	"fileName": "id_1580482019646_68_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"reference": "itsgrp.com.bancoboleto.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "useExportToExcel",
+		"newValue": true
+	},
+	"selector": {
+		"id": "itsgrp.com.bancoboleto::sap.suite.ui.generic.template.ListReport.view.ListReport::getzfit100_06Set--listReport",
+		"type": "sap.ui.comp.smarttable.SmartTable",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/itsgrp.com.bancoboleto/changes/",
+	"creation": "2020-01-31T14:47:02.616Z",
+	"originalLanguage": "PT",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.52.37"
+	},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "1.0.0",
+		"from": "1.0.0",
+		"to": "1.0.0"
+	}
+}

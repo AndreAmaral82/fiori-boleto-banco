@@ -1,0 +1,111 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="/sap/opu/odata/sap/ZGET_ZFIT100_06_SRV/$metadata">
+		<edmx:Include Alias="Metadata" Namespace="ZGET_ZFIT100_06_SRV"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="BancoBoleto.annotations.annotation.ZGET_ZFIT100_06_SRV">
+			<Annotations Target="Metadata.getzfit100_06">
+				<Annotation Term="UI.HeaderFacets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet">
+							<PropertyValue Property="Target" AnnotationPath="@UI.DataPoint"/>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet">
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;INFORMAÇÕES_ADICIONAIS}"/>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Bukrs"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="ZvalDe"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="ZvalAte"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Stapl"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Zseq"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value">
+							<Apply Function="odata.concat">
+								<Path>Bukrs</Path>
+								<Path>ZvalAte</Path>
+								<Path>ZvalDe</Path>
+								<Path>Stapl</Path>
+								<Path>Zseq</Path>
+							</Apply>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record Type="UI.HeaderInfoType">
+						<PropertyValue Property="TypeName" String="{@i18n&gt;appTitle}"/>
+						<PropertyValue Property="TypeNamePlural" String="{@i18n&gt;BANCO_VALIDOS}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>Bukrs</PropertyPath>
+						<PropertyPath>ZvalDe</PropertyPath>
+						<PropertyPath>ZvalAte</PropertyPath>
+						<PropertyPath>Hbkid</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Bukrs"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;EMPRESA}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ZvalDe"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ZvalAte"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Hbkid"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Stapl"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Zseq"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;SEQUENCIA}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ImpBolDanfe"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;IMPRIME_BOLETO_NA_DANFE}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="EnvEmail"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;ENVIA_POR_E-MAIL}"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

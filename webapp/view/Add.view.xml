@@ -1,0 +1,14 @@
+<mvc:View
+	controllerName= "itsgrp.com.bancoboleto.ext.controller.ListReportExt"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic"
+	xmlns:smartfield="sap.ui.comp.smartfield"
+	xmlns:smartform="sap.ui.comp.smartform"
+	xmlns="sap.m">
+	<semantic:FullscreenPage>
+	<semantic:saveAction>
+			<semantic:SaveAction id="Actiongetzfit100_06Set1button" press="onClickActiongetzfit100_06Set1"/>
+		</semantic:saveAction>
+
+	</semantic:FullscreenPage>
+</mvc:View>

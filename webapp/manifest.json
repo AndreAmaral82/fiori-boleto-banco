@@ -1,0 +1,176 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "itsgrp.com.bancoboleto",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"tags": {
+			"keywords": []
+		},
+		"dataSources": {
+			"mainService": {
+				"uri": "/sap/opu/odata/sap/ZGET_ZFIT100_06_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/metadata.xml",
+					"annotations": [
+						"annotation"
+					]
+				}
+			},
+			"annotation": {
+				"type": "ODataAnnotation",
+				"uri": "annotations/annotation.xml",
+				"settings": {
+					"localUri": "annotations/annotation.xml"
+				}
+			}
+		},
+		"offline": false,
+		"sourceTemplate": {
+			"id": "ui5template.smartTemplate",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"resources": {
+			"js": [],
+			"css": []
+		},
+		"dependencies": {
+			"minUI5Version": "1.52.0",
+			"libs": {},
+			"components": {}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"@i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"i18n|sap.suite.ui.generic.template.ListReport|getzfit100_06Set": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/ListReport/getzfit100_06Set/i18n.properties"
+			},
+			"i18n|sap.suite.ui.generic.template.ObjectPage|getzfit100_06Set": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/ObjectPage/getzfit100_06Set/i18n.properties"
+			},
+			"": {
+				"dataSource": "mainService",
+				"preload": true,
+				"settings": {
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Inline",
+					"refreshAfterChange": false,
+					"metadataUrlParams": {
+						"sap-value-list": "none"
+					},
+					"useBatch": false
+				}
+			}
+		},
+		"extends": {
+			"extensions": {
+				"sap.ui.controllerExtensions": {
+					"sap.suite.ui.generic.template.ListReport.view.ListReport": {
+						"controllerName": "itsgrp.com.bancoboleto.ext.controller.ListReportExt",
+						"sap.ui.generic.app": {
+							"getzfit100_06Set": {
+								"EntitySet": "getzfit100_06Set",
+								"Actions": {
+									"Actiongetzfit100_06Set1": {
+										"id": "Actiongetzfit100_06Set1button",
+										"text": "{@i18n>Actiongetzfit100_06Set1}",
+										"press": "onClickActiongetzfit100_06Set1"
+									},
+									"Actiongetzfit100_06Set2": {
+										"id": "Actiongetzfit100_06Set2button",
+										"text": "{@i18n>Actiongetzfit100_06Set2}",
+										"press": "onClickActiongetzfit100_06Set2"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		}
+	},
+	"sap.ui.generic.app": {
+		"_version": "1.3.0",
+		"settings": {
+			"flexibleColumnLayout": {
+				"defaultTwoColumnLayoutType": "TwoColumnsMidExpanded",
+				"defaultThreeColumnLayoutType": "ThreeColumnsEndExpanded"
+			},
+			"forceGlobalRefresh": false,
+			"objectPageHeaderType": "Dynamic",
+			"showDraftToggle": false
+		},
+		"pages": {
+			"ListReport|getzfit100_06Set": {
+				"entitySet": "getzfit100_06Set",
+				"component": {
+					"name": "sap.suite.ui.generic.template.ListReport",
+					"list": true,
+					"settings": {
+						"condensedTableLayout": true,
+						"smartVariantManagement": true,
+						"enableTableFilterInPageVariant": true,
+						"multiSelect": true
+					}
+				},
+				"pages": {
+					"ObjectPage|getzfit100_06Set": {
+						"entitySet": "getzfit100_06Set",
+						"component": {
+							"name": "sap.suite.ui.generic.template.ObjectPage",
+							"settings": {
+								"ShowRelatedApps": true, 
+								"gridTable": false,
+								"editableHeaderContent": true,
+								"simpleHeaderFacets": false
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": ""
+	}
+}

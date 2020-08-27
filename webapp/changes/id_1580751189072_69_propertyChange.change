@@ -1,0 +1,35 @@
+{
+	"fileName": "id_1580751189072_69_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"reference": "itsgrp.com.bancoboleto.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "activeIcon",
+		"newValue": ""
+	},
+	"selector": {
+		"id": "itsgrp.com.bancoboleto::sap.suite.ui.generic.template.ListReport.view.ListReport::getzfit100_06Set--Actiongetzfit100_06Set1button",
+		"type": "sap.m.Button",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/itsgrp.com.bancoboleto/changes/",
+	"creation": "2020-02-03T17:35:38.764Z",
+	"originalLanguage": "PT",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.52.37"
+	},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "1.0.0",
+		"from": "1.0.0",
+		"to": "1.0.0"
+	}
+}

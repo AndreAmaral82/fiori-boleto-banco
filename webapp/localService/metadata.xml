@@ -1,0 +1,19 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZGET_ZFIT100_06_SRV" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="getzfit100_06" sap:content-version="1">
+				<Key><PropertyRef Name="Bukrs"/><PropertyRef Name="ZvalDe"/><PropertyRef Name="ZvalAte"/><PropertyRef Name="ZbancoDm"/><PropertyRef Name="Hbkid"/><PropertyRef Name="Stapl"/><PropertyRef Name="Zseq"/></Key><Property Name="Bukrs" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Company Code" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="ZvalDe" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/><Property Name="ZvalAte" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/><Property Name="ZbancoDm" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/><Property Name="Hbkid" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/><Property Name="Stapl" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/><Property Name="Zseq" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/><Property Name="ImpBolDanfe" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="EnvEmail" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/></EntityType>
+			<EntityContainer Name="ZGET_ZFIT100_06_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="getzfit100_06Set" EntityType="ZGET_ZFIT100_06_SRV.getzfit100_06" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/></EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZGET_ZFIT100_06_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZGET_ZFIT100_06_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
